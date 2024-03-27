@@ -10,6 +10,6 @@ public class HomeController : ControllerBase
     [HttpGet]
     public IActionResult Index()
     {
-        return Ok("Hello World!!!");
+        return Ok("Olá mundo =)");
     }
 }
