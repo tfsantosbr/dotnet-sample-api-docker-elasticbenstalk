@@ -12,11 +12,4 @@ public class HomeController : ControllerBase
     {
         return Ok("Hello World!!!");
     }
-
-    [HttpGet("secure")]
-    [Authorize]
-    public IActionResult Secure()
-    {
-        return Ok("You are allowed!!!");
-    }
 }

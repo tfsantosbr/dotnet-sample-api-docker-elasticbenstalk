@@ -1,5 +1,6 @@
 using Keycloak.AuthServices.Authentication;
 using Keycloak.AuthServices.Authorization;
+using Keycloak.AuthServices.Sdk.Admin;
 
 var builder = WebApplication.CreateBuilder(args);
 
