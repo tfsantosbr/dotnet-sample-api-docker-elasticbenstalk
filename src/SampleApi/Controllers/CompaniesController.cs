@@ -25,7 +25,7 @@ public class CompaniesController : ControllerBase
     {
         if(string.IsNullOrWhiteSpace(newCompany.Name))
         {
-            throw new Exception("Company name can't be empy");
+            throw new Exception("Company name can't be empty");
         }
 
         _companies.Add(newCompany);
