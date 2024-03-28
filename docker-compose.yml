@@ -6,5 +6,23 @@ services:
     build:
       context: .
       dockerfile: src/SampleApi/Dockerfile
+    environment:
+      NEW_RELIC_LICENSE_KEY: ${NEW_RELIC_LICENSE_KEY}
+      NEW_RELIC_APP_NAME: ${NEW_RELIC_APP_NAME}
     ports:
       - 80:8080
+
+  newrelic-infra:
+    container_name: newrelic-infra
+    image: newrelic/infrastructure:latest
+    cap_add:
+      - SYS_PTRACE
+    network_mode: host
+    pid: host
+    privileged: true
+    environment:
+      NRIA_LICENSE_KEY: ${NEW_RELIC_LICENSE_KEY}
+    volumes:
+      - "/:/host:ro"
+      - "/var/run/docker.sock:/var/run/docker.sock"
+    restart: unless-stopped
