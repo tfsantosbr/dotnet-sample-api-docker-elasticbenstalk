@@ -16,7 +16,7 @@ jobs:
     - name: Install EB CLI
       run: |
         sudo apt update
-        sudo apt install awscli
+        sudo apt install awsebcli
 
     - name: Deploy to AWS Elastic Beanstalk
       run: |
