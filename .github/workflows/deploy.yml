@@ -18,8 +18,7 @@ jobs:
       uses: aws-actions/configure-aws-credentials@v4
       with:
         aws-region: us-east-2
-        role-to-assume: arn:aws:iam::730335453782:oidc-provider/token.actions.githubusercontent.com
-        role-session-name: github-actions-role
+        role-to-assume: arn:aws:iam::730335453782:role/github-actions-role
 
     - name: Install EB CLI using pip
       run: |
