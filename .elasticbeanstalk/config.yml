@@ -1,6 +1,10 @@
 branch-defaults:
   main:
     environment: sample-api-prod
+environment-defaults:
+  sample-api-prod:
+    branch: null
+    repository: null
 global:
   application_name: sample-api
   branch: null
