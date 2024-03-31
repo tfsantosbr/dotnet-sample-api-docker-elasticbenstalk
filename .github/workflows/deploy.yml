@@ -20,9 +20,9 @@ jobs:
       with:
         aws-region: us-east-2
         role-to-assume: arn:aws:iam::730335453782:oidc-provider/token.actions.githubusercontent.com
-      permissions:
-        id-token: write
-        contents: read
+        permissions:
+          id-token: write
+          contents: read
         
 
     - name: Install EB CLI using pip
